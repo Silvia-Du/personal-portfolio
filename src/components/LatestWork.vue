@@ -1,5 +1,5 @@
 <template>
-  <div class="latest-work debug">
+  <div class="latest-work">
     <div class="container py-5">
       <p class="sec-title my-5">My latest work</p>
       <div class="row">
@@ -26,8 +26,11 @@ export default {
 </script>
 
 <style lang="scss" scoped >
+@import '../assets/style/vars';
+
 
 .latest-work{
+  background-color: $bgLightGray;
   .sec-title{
     font-size: 3rem;
     font-weight: bolder;

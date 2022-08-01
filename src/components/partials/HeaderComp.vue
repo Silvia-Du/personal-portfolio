@@ -1,13 +1,13 @@
 <template>
   <header>
-    <div class="container py-3 px-0 d-flex justify-content-between">
+    <div class="px-4 py-3 d-flex justify-content-between">
 
       <img src="../../assets/img/logo.png" alt="logo-sd">
 
       <div class="d-flex align-items-center">
         <i class="fa-regular fa-moon"></i>
         <!-- hamburger -->
-        <div class="hamburger debug ms-3">
+        <div class="hamburger ms-3">
           <div class="up"></div>
           <div class="bottom"></div>
         </div>
@@ -26,7 +26,10 @@ export default {
 @import '../../assets/style/vars';
 
 header{
-  border-bottom: 1px solid brown;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
   img{
     width: 50px;
   }
@@ -50,7 +53,7 @@ header{
     .up, .bottom{
       position: absolute;
       width: 100%;
-      height: 3px;
+      height: 2px;
       border-radius: 3px;
       background-color: $blackText;
       transition: all 0.2s;
