@@ -70,26 +70,59 @@ export default {
     }
     .form.n10{
       width: 523px;
+      animation-name: bottom-left;
+      animation-duration: 3s;
       transform: rotate(62deg);
       left: -16px;
       bottom: -167px;
     }
     .form.n5{
       width: 343px;
+      animation-name: bottom-right;
+      animation-duration: 2.5s;
       transform: rotate(-101deg);
       bottom: -162px;
       right: -26px;
     }
     .form.n7{
       width: 200px;
+      animation-duration: 2s;
+      animation-name: top-left;
       left: 0;
       top: 0;
     }
     .form.n3{
       width: 600px;
+      animation-name: top-right;
+      animation-duration: 3s;
       transform: rotate(-45deg);
       top: -220px;
       right: 52px;
+    }
+
+    @keyframes bottom-left {
+
+      0%   {transform: rotate(0deg); left: -200px; bottom: 0; opacity: 0%;}
+      100% {transform: rotate(62deg); left: -16px; bottom: -167px; opacity:0.9;}
+      
+    }
+    @keyframes top-left {
+
+      0%   {transform: rotate(62deg); left: -300px; opacity: 0%;}
+      100% {transform: rotate(0deg); left: -0px;  opacity:0.9;}
+      
+    }
+    @keyframes top-right {
+
+      0%   {transform: rotate(360deg); top: -600px; right: -400px; opacity: 0%;}
+      100% {transform: rotate(-45deg); top: -220px; right: 52px;  opacity:0.9;}
+      
+    }
+    @keyframes bottom-right {
+
+      0%   {transform: rotate(180deg); bottom: -400px; right: -350px; opacity: 0%;}
+      100% {transform: rotate(-101deg); bottom: -162px; right: -26px;  opacity:0.9;}
+      
     }
 }
 </style>
