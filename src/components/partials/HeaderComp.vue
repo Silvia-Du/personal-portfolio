@@ -1,5 +1,19 @@
 <template>
-  <header class="">Header</header>
+  <header>
+    <div class="container py-3 px-0 d-flex justify-content-between">
+
+      <img src="../../assets/img/logo.png" alt="logo-sd">
+
+      <div class="d-flex align-items-center">
+        <i class="fa-regular fa-moon"></i>
+        <!-- hamburger -->
+        <div class="hamburger debug ms-3">
+          <div class="up"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+    </div>
+  </header>
 </template>
 
 <script>
@@ -9,10 +23,49 @@ export default {
 </script>
 
 <style lang="scss" scoped >
+@import '../../assets/style/vars';
 
 header{
-  height: 80px;
   border-bottom: 1px solid brown;
+  img{
+    width: 50px;
+  }
+
+  .fa-moon{
+    font-size: 1.7rem;
+  }
+
+  .hamburger{
+    position: relative;
+    width: 27px;
+    height: 18px;
+    &:active .up{
+        transform: rotate(-40deg);
+        top: 6px;
+      }
+    &:active .bottom{
+        transform: rotate(38deg);
+        bottom: 7px;
+      }
+    .up, .bottom{
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background-color: $blackText;
+      transition: all 0.2s;
+    }
+
+    .up{
+      margin-bottom: 10px;
+      top: 0;
+      left: 0;
+    }
+    .bottom{
+      bottom: 0;
+      left: 0;
+    }
+  }
 }
 
 </style>
